@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "4C/wH+hQJOvuckUR6kqB/ymZlndw+EYs6oE3xnZ+ABM=",
+  "Hash": "PN4SGJPI43Ms1C0Uf8UEMkCZ79zXTz0cgfmtWELjFzw=",
   "Source": "Lab7",
   "BasePath": "_content/Lab7",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Lab7\\wwwroot",
+      "Source": "Lab7",
+      "ContentRoot": "C:\\Users\\hp\\RiderProjects\\Lab7\\Lab7\\wwwroot\\",
+      "BasePath": "_content/Lab7",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\hp\\RiderProjects\\Lab7\\Lab7\\wwwroot\\css\\mycsstest.css",
+      "SourceId": "Lab7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hp\\RiderProjects\\Lab7\\Lab7\\wwwroot\\",
+      "BasePath": "_content/Lab7",
+      "RelativePath": "css/mycsstest.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\mycsstest.css"
+    },
+    {
+      "Identity": "C:\\Users\\hp\\RiderProjects\\Lab7\\Lab7\\wwwroot\\images\\8b3b91da94ae7bbbdbd2a0f58ed9066a--university.jpg",
+      "SourceId": "Lab7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hp\\RiderProjects\\Lab7\\Lab7\\wwwroot\\",
+      "BasePath": "_content/Lab7",
+      "RelativePath": "images/8b3b91da94ae7bbbdbd2a0f58ed9066a--university.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8b3b91da94ae7bbbdbd2a0f58ed9066a--university.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hp\\RiderProjects\\Lab7\\Lab7\\wwwroot\\js\\myjsfiletest.js",
+      "SourceId": "Lab7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hp\\RiderProjects\\Lab7\\Lab7\\wwwroot\\",
+      "BasePath": "_content/Lab7",
+      "RelativePath": "js/myjsfiletest.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\myjsfiletest.js"
+    }
+  ]
 }

@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using System.Text.Json;
+using Azure.Storage.Blobs;
 using Lab7;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -20,6 +21,10 @@ builder.Services.AddLogging(logging =>
     logging.SetMinimumLevel(LogLevel.Debug); 
 });
 
+builder.Services.AddSingleton<BlobStorageService>();
+builder.Services.AddSingleton(_ => {
+    return new BlobServiceClient("UseDevelopmentStorage=true");
+});
 builder.Services.AddAuthentication(options =>
     {
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -128,6 +133,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+
 app.UseRouting();
 
 app.UseAuthentication();

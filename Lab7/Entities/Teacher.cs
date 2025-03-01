@@ -12,4 +12,6 @@ public class Teacher
 
     [Required]
     public string Subject { get; set; } = string.Empty;
+    
+    public string ProfilePictureUrl { get; set; }
 }
