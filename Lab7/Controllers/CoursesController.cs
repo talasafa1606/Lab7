@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
+//using System.Security.Claims;
 using Lab7.Entities;
 
 namespace Lab7.Controllers
@@ -15,7 +15,8 @@ namespace Lab7.Controllers
         {
             _context = context;
         }
-        [HttpGet("debug-token")]
+     
+        /*[HttpGet("debug-token")]
         [Authorize]
         public IActionResult DebugToken()
         {
@@ -39,7 +40,7 @@ namespace Lab7.Controllers
             });
         }
 
-
+*/
         [HttpPost]
         [Authorize(Policy = "TeacherOnly")]
         public IActionResult CreateCourse([FromBody] Course course)
