@@ -120,6 +120,8 @@ builder.Services.AddAuthorization(options =>
         policy.RequireRole("Admin")); 
 });
 
+builder.Services.AddSingleton<RabbitMQPublisher>();
+
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<KeycloakUserService>();
 

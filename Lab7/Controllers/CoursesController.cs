@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿/*
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 //using System.Security.Claims;
 using Lab7.Entities;
@@ -16,7 +17,7 @@ namespace Lab7.Controllers
             _context = context;
         }
      
-        /*[HttpGet("debug-token")]
+        [HttpGet("debug-token")]
         [Authorize]
         public IActionResult DebugToken()
         {
@@ -40,7 +41,7 @@ namespace Lab7.Controllers
             });
         }
 
-*/
+
         [HttpPost]
         [Authorize(Policy = "TeacherOnly")]
         public IActionResult CreateCourse([FromBody] Course course)
@@ -49,7 +50,7 @@ namespace Lab7.Controllers
 
             _context.Courses.Add(course);
             _context.SaveChanges();
-            return Ok(new { Message = "Course created successfully", CourseId = course.CourseId });
+            return Ok(new { Message = "Course created successfully", CourseId = course.Id });
         }
 
         [HttpGet("admin")]
@@ -81,3 +82,4 @@ namespace Lab7.Controllers
 
     }
 }
+*/

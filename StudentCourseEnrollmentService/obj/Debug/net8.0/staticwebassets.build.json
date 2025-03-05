@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LNroa8W7upXPVse9Y4lyTOLp4eG7DR7xWVclW1FaCUU=",
+  "Source": "StudentCourseEnrollmentService",
+  "BasePath": "_content/StudentCourseEnrollmentService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
