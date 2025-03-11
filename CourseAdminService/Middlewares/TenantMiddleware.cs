@@ -18,7 +18,6 @@ public class TenantMiddleware
     {
         try 
         {
-            // Extract TenantId from various sources
             var tenantId = context.Request.Headers["X-Tenant-ID"].FirstOrDefault();
 
             if (string.IsNullOrEmpty(tenantId))
@@ -52,7 +51,6 @@ public class TenantMiddleware
                 return;
             }
 
-            // Validate tenant against known tenants (optional)
             var validTenants = new[] { "university_a", "university_b" };
             if (!validTenants.Contains(tenantId))
             {
@@ -66,14 +64,11 @@ public class TenantMiddleware
                 return;
             }
 
-            // Log tenant information
             _logger.LogInformation($"Processing request for tenant: {tenantId}");
 
-            // Set tenant ID in the TenantContext
             tenantContext.TenantId = tenantId;
             _logger.LogInformation($"aam jarrib: {tenantContext.TenantId}");
 
-            // Continue processing the request
             await _next(context);
         }
         catch (Exception ex)
