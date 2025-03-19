@@ -23,7 +23,7 @@ namespace Lab7.Services
         }
 //sdjbkjfndfkfk
         public string GetEmail()
-        {
+        {//fdf
             return _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.Email)?.Value;
         }
 
