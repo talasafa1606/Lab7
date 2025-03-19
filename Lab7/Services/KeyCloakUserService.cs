@@ -16,7 +16,7 @@ namespace Lab7.Services
         {
             return _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         }
-
+//sdcs
         public string GetUsername()
         {
             return _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.Name)?.Value;
