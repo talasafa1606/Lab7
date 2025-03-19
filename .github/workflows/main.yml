@@ -1,3 +1,4 @@
+
 name: CI/CD Pipeline for Lab8 Branch
 
 on:
@@ -29,3 +30,5 @@ jobs:
         run: |
           docker build -t talasafa1606/testlab:latest .
           docker push talasafa1606/testlab:latest
+        with:
+            file: Lab7/Dockerfile
