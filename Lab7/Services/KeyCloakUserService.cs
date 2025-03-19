@@ -7,7 +7,7 @@ namespace Lab7.Services
     {
         //testtesttest
         private readonly IHttpContextAccessor _httpContextAccessor;
-
+//alallalal
         public KeycloakUserService(IHttpContextAccessor httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
