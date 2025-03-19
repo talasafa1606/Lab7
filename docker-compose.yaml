@@ -1,0 +1,80 @@
+﻿version: '3.8'
+
+networks:
+  frontend-net:
+    driver: bridge
+  
+  backend-net:
+    driver: bridge
+  
+  db-net:
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: newtest-postgres
+    environment:
+      POSTGRES_USER: talasafa16
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: schoolDB
+    ports:
+      - "5432:5432"
+    networks:
+      - db-net
+
+  courseadminservice:
+    build:
+      context: ./CourseAdminService
+      dockerfile: Dockerfile
+    container_name: courseadmin-service
+    ports:
+      - "8001:80"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=schoolDB;Username=talasafa16;Password=mypassword
+      - AuthService__Url=http://lab7
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - postgres
+    networks:
+      - frontend-net
+      - backend-net
+      - db-net
+  
+  lab7:
+    build:
+      context: ./Lab7
+      dockerfile: Dockerfile
+    container_name: auth-service
+    ports:
+      - "8002:80"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=schoolDB;Username=talasafa16;Password=mypassword
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - postgres
+    networks:
+      - frontend-net
+      - backend-net
+      - db-net
+  
+  studentcourseenrollmentservice:
+    build:
+      context: ./StudentCourseEnrollmentService
+      dockerfile: Dockerfile
+    container_name: enrollment-service
+    ports:
+      - "8003:80"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=schoolDB;Username=talasafa16;Password=mypassword
+      - CourseAdminService__Url=http://courseadminservice
+      - AuthService__Url=http://lab7
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - postgres
+      - courseadminservice
+      - lab7
+    networks:
+      - frontend-net
+      - backend-net
+      - db-net

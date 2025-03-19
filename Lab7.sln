@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab7", "Lab7\Lab7.csproj", "{F2407B28-002E-460A-9028-22F505BD37BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseAdminService", "CourseAdminService\CourseAdminService.csproj", "{B47AD5A4-35D3-4163-A16D-6A0AC979FE2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentCourseEnrollmentService", "StudentCourseEnrollmentService\StudentCourseEnrollmentService.csproj", "{F57F2376-BE10-4E01-98E9-DD3E9E147A6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,15 @@ Global
 		{F2407B28-002E-460A-9028-22F505BD37BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2407B28-002E-460A-9028-22F505BD37BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2407B28-002E-460A-9028-22F505BD37BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B47AD5A4-35D3-4163-A16D-6A0AC979FE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B47AD5A4-35D3-4163-A16D-6A0AC979FE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B47AD5A4-35D3-4163-A16D-6A0AC979FE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B47AD5A4-35D3-4163-A16D-6A0AC979FE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57F2376-BE10-4E01-98E9-DD3E9E147A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57F2376-BE10-4E01-98E9-DD3E9E147A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57F2376-BE10-4E01-98E9-DD3E9E147A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57F2376-BE10-4E01-98E9-DD3E9E147A6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
