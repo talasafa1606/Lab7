@@ -1,7 +1,7 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY ["Lab7.csproj", "./"]
+COPY ["Lab7/Lab7.csproj", "./"]
 RUN dotnet restore
 
 COPY . .
