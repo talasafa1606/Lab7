@@ -1,0 +1,31 @@
+name: CI/CD Pipeline for Lab8 Branch
+
+on:
+  push:
+    branches:
+      - lab8  
+  pull_request:
+    branches:
+      - lab8 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/lab8-app:latest .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/lab8-app:latest
