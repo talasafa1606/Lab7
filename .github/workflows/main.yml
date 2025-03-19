@@ -1,13 +1,12 @@
-
 name: CI/CD Pipeline for Lab8 Branch
 
 on:
   push:
     branches:
-      - Lab8  
+      - Lab8
   pull_request:
     branches:
-      - Lab8 
+      - Lab8
 
 jobs:
   build-and-deploy:
@@ -28,7 +27,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t talasafa1606/testlab:latest .
+          docker build -t talasafa1606/testlab:latest -f Lab7/Dockerfile .
           docker push talasafa1606/testlab:latest
-        with:
-            file: Lab7/Dockerfile
