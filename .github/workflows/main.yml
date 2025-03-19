@@ -27,5 +27,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/lab8-app:latest .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/lab8-app:latest
+          docker build -t talasafa1606/testlab:latest .
+          docker push talasafa1606/testlab:latest
