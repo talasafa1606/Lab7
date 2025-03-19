@@ -3,10 +3,10 @@ name: CI/CD Pipeline for Lab8 Branch
 on:
   push:
     branches:
-      - lab8  
+      - Lab8  
   pull_request:
     branches:
-      - lab8 
+      - Lab8 
 
 jobs:
   build-and-deploy:
