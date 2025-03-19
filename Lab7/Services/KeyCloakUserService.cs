@@ -21,7 +21,7 @@ namespace Lab7.Services
         {
             return _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.Name)?.Value;
         }
-
+//sdjbkjfndfkfk
         public string GetEmail()
         {
             return _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.Email)?.Value;
